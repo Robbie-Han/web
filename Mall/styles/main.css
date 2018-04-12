@@ -1,0 +1,496 @@
+/*定义页眉的背景和高度*/
+header{
+    background: url("../images/headerbg.png") repeat-x scroll 0 0 #ffffff;
+    height: 105px;
+}
+/*定义页眉的宽高，相对定位，居中*/
+header .hSet{
+    position: relative;
+    height: 105px;
+    width:990px;
+    margin: 0 auto;
+    z-index: 100;
+}
+/*设置logo*/
+header .logo{
+    float: left;
+    margin-left: 10px;
+    color: #080e6a;
+    line-height: 80px;
+}
+/*设置搜索框*/
+header .search{
+    position: absolute;
+    left: 300px;
+    top: 20px;
+}
+#inputSearch{
+    width: 350px;
+    height: 2em;
+    border-radius: 7px;
+    padding-left: 7px;
+}
+#inputSearch.focus{
+    border:#00A5FF;
+
+
+}
+/*设置导航栏颜色*/
+#skin{
+    float: right;
+    margin: 10px;
+    padding: 4px;
+    width: 120px;
+
+}
+#skin li{
+    display: block;
+    float: left;
+    width: 15px;
+    height: 15px;
+    text-indent: -9999px;
+    margin-right: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    background-image: url("../images/theme.gif");
+}
+/*这里的背景图片是平铺整个页面的 15px,图像整体向右移动15px，这时候紫色框刚好到来*/
+#skin_0 { background-position:0 0; }
+#skin_1 { background-position:15px 0; }
+#skin_2 { background-position:35px 0; }
+#skin_3 { background-position:55px 0; }
+#skin_4 { background-position:75px 0; }
+#skin_5 { background-position:95px 0; }
+/*对应上面X的位置只要将他的y轴移动15个像素，背景就会有加号*/
+#skin_0.selected { background-position:0 15px; }
+#skin_1.selected { background-position:15px 15px; }
+#skin_2.selected { background-position:35px 15px; }
+#skin_3.selected { background-position:55px 15px; }
+#skin_4.selected { background-position:75px 15px; }
+#skin_5.selected { background-position:95px 15px; }
+/*确定导航栏的宽高位置，背景色*/
+nav{
+    position:absolute;
+    top: 68px;
+    height: 37px;
+    line-height: 37px;
+    width: 990px;
+    z-index: 100;
+    background-color: #44AA44;
+
+}
+/*导航栏 设置ul浮动，li浮动来清除浮动*/
+nav ul{
+    display: inline;
+    float: left;
+    margin-left: 25px;
+}
+nav .nav li{
+    float: left;
+    display: inline;
+    margin-right: 14px;
+    position: relative;
+    z-index: 100;
+}
+/*将a转为块设置padding*/
+.nav li a{
+    display: block;
+    padding: 0 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+}
+.nav li a:hover{
+  opacity: 0.8;
+}
+/*定义二级菜单,设置背景，边框宽度*/
+.jnNav{
+    background-color: white;
+    border: 1px solid #B1B1B1;
+    overflow: hidden;
+    width: 474px;
+    z-index: 1000;
+    top: 37px;
+    position: absolute;
+    display: none;
+}
+.subitem{
+    float: left;
+    height: auto !important;
+    min-height: 100px;
+    padding: 10px 12px;
+    width: 450px;
+}
+.subitem dl{
+    border-top: 1px dashed #c4c4c4;
+    overflow: hidden;
+    padding: 8px 0;
+    float: left;
+    border-top-style: none;
+    padding-top: 0;
+}
+.subitem dt{
+    float: left;
+    font-weight: bold;
+    line-height: 16px;
+    padding: 4px 3px;
+    width: 80px;
+    text-align: center;
+}
+.subitem dt a{
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.subitem dd{
+    float: left;
+    overflow: hidden;
+    width: 364px;
+}
+.subitem em {
+    border-right: 1px solid #CCCCCC;
+    float: left;
+    font-style: normal;
+    height: 14px;
+    line-height: 14px;
+    margin: 5px 0;
+    padding: 0 8px;
+}
+.subitem em a{
+    color: #666666;
+    white-space: nowrap;
+    font-size:12px;
+    font-weight:normal;
+    padding:0;
+}
+.subitem em a:hover{
+    color: #44AA44;
+}
+/*主体内容设计*/
+#content{
+    clear: left;
+    margin: 0 auto;
+    position: relative;
+    width: 990px;
+}
+.janeShop{
+    height: 560px;
+    overflow: hidden;
+    padding: 10px 0;
+}
+/*左侧边栏设计*/
+#category{
+    float: left;
+    height: 560px;
+    margin: 0 11px 0 0;
+    overflow: hidden;
+    width: 187px;
+    border-bottom: 1px solid gray;
+}
+#category h2{
+    height:30px;
+    line-height:30px;
+    color:#ffff;
+    font-size:12px;
+    text-indent:13px;
+    background-color:#6E6E6E;
+}
+/*设置每个具体分类的容器*/
+.Info{
+    border: 1px solid #6E6E6E;
+    height: 524px;
+    overflow: hidden;
+    padding: 5px 10px 0;
+    width: 165px;
+}
+/*设置分类副标题*/
+.Info h3 {
+    border-bottom: 1px solid #EEEEEE;
+    height: 24px;
+    line-height:24px;
+    width: 164px;
+}
+/*设置商品分类的*/
+.Info ul {
+    float: left;
+    padding: 0 2px 8px;
+}
+/*设置商品分类的将他们转成内联元素*/
+.Info li {
+    color: #AEADAE;
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    width: 79px;
+    overflow: hidden;
+    position:relative;
+}
+.Info li a{
+    color: #444444;
+}
+.Info li a:hover{
+    color: #008CD7;
+    text-decoration: none;
+}
+.Info li a.promotion{
+    color:red;
+}
+.Info  li .hot {
+    background: url("../images/hot.gif") no-repeat scroll 0 0 transparent;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    width: 21px;
+}
+/* 大屏广告 */
+#imageSlide {
+    float: left;
+    position: relative;
+    width: 550px;
+    height: 320px;
+    margin: 0 11px 0 0;
+    overflow: hidden;
+}
+#imageSlide img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/*图片底下小方框容器*/
+#imageSlide div {
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    float: left;
+}
+#imageSlide div a {
+    background-color: #444444;
+    color: #FFFFFF;
+    display: inline-block;
+    float: left;
+    height: 32px;
+    width: 79px;
+    margin-right: 1px;
+    padding: 5px 15px;
+    text-align: center;
+    overflow: hidden;
+}
+#imageSlide div a:hover {
+    text-decoration: none;
+}
+#imageSlide div a em {
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    overflow: hidden;
+    width: 79px;
+}
+#imageSlide .last {
+    margin: 0;
+    width: 80px;
+}
+#imageSlide a.backGround {
+    background: url("../images/adindex.gif") no-repeat center 39px #37A7D7;
+    color: #FFFFFF;
+}
+/*右侧栏*/
+#right{
+    float: left;
+    height: 321px;
+    overflow: hidden;
+    width: 230px;
+}
+#login {
+    float: left;
+    height: 176px;
+    width: 230px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+#login img{
+    display: block;
+    margin: 10px auto;
+    border-radius: 50px;
+}
+#login ul,p{
+    text-align: center;
+}
+#login ul{
+    padding-left: 55px;
+}
+#login li{
+   float: left;
+}
+#login li a{
+    color: black;
+    display: block;
+    padding: 0 5px;
+    width: 50px;
+    height: 20px;
+    text-decoration: none;
+    background: #B1B1B1;
+    margin-top: 5px;
+    margin-right:2px;
+    border-radius: 5px;
+}
+#login li a:hover{
+    background: #FA5889;
+}
+#NoticeInfo {
+    float: left;
+    border: 1px solid #DFDFDF;
+    height: 133px;
+    overflow: hidden;
+    width: 228px;
+}
+#notice a{
+    padding-left: 10px;
+}
+.container{
+    float: left;
+    width:500px;
+    height: auto;
+
+}
+.content a:first-child{
+    border-right: 1px solid #c1c1c1;
+    padding-right: 10px;
+}
+.content a:hover{
+    color: #FA5889;
+}
+.switch_1{
+    width: 220px;
+     margin-top: 5px;
+     padding-right:25px;
+     float: left;
+    display: none;
+
+ }
+.switch_2{
+    margin-top: 5px;
+    padding-right:25px;
+    float: left;
+    display: none;
+    width: 220px;
+
+}
+.switch_1 a{
+    color: #5f65ff;
+}
+.switch_1 a:hover{
+    color: #FA5889;
+}
+.switch_2 a{
+    color: #5f65ff;
+}
+.switch_2 a:hover{
+    color: #FA5889;
+}
+
+
+
+/* 品牌活动 */
+#jnBrand {
+    float: left;
+    height: 230px;
+    margin: 10px 0 0;
+    width: 790px;
+}
+#jnBrandTab {
+    border-bottom: 1px solid #E4E4E4;
+    height: 29px;
+    position: relative;
+    width: 790px;
+    float: left;
+}
+#jnBrandTab h2 {
+    height: 29px;
+    line-height: 29px;
+    left: 0;
+    position: absolute;
+    width: 100px;
+}
+#jnBrandTab ul {
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+#jnBrandTab li {
+    float: left;
+    margin: 0 10px 0 0;
+}
+#jnBrandTab li a {
+    background-color: #E4E4E4;
+    color: #000000;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 10px;
+}
+.tab {
+    background: url("../images/chos.gif") no-repeat scroll 50% bottom transparent;
+    padding-bottom: 3px;
+}
+#jnBrandTab .tab a {
+    background-color: #FA5889;
+    color: #FFFFFF;
+}
+/*设置显示窗口大小*/
+#jnBrandContent {
+    float: left;
+    height: 188px;
+    overflow: hidden;
+    margin: 8px 5px;
+    width: 785px;
+    position: relative;
+}
+/*装载图片的容器*/
+#jnBrandList {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3200px;
+
+}
+#jnBrandContent li {
+    float: left;
+    height: 188px;
+    overflow: hidden;
+    padding: 0 5px;
+    position: relative;
+    width: 185px;
+}
+#jnBrandContent li img {
+    left: 5px;
+    position: absolute;
+    top: 0;
+
+}
+#jnBrandContent li span {
+    background-color: #EFEFEF;
+    bottom: 0;
+    color: #666666;
+    display: inline-block;
+    font-size: 14px;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    width: 183px;
+}
+#jnBrandContent li a {
+    color:#666666;
+}
+#jnBrandContent li a:hover{
+    color: #008CD7;
+    text-decoration: none;
+    opacity: 0.5;
+}
+footer{
+    text-align: center;
+    font-size: 1em;
+    background: darkgrey;
+}

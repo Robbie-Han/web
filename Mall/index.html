@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jeanShop购物网站</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/skin/skin_0.css" type="text/css" id="skinFile" />
+    <script src="scripts/jquery-1.11.1.js"></script>
+    <script src="scripts/jquery.cookie.js" type="text/javascript"></script>
+    <script>
+
+    </script>
+
+</head>
+<body>
+    <header>
+        <div class="hSet">
+            <!--定义头部，包含商城Logo,搜索框，页面肤色，导航栏-->
+            <a href="index.html" class="logo"><img src="images/logo2.jpg" alt="Shop"></a>
+            <div class="search"><input type="text" id="inputSearch" value="请输入您想要的商品......"></div>
+            <ul id="skin" >
+                <li id="skin_0" title="蓝色" class="selected">蓝色</li>
+                <li id="skin_1" title="紫色">紫色</li>
+                <li id="skin_2" title="红色">红色</li>
+                <li id="skin_3" title="天蓝色">天蓝色</li>
+                <li id="skin_4" title="橙色">橙色</li>
+                <li id="skin_5" title="淡绿色">淡绿色</li>
+            </ul>
+            <nav>
+                <ul class="nav">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">女装/男装</a>
+                        <div class="jnNav">
+                            <div class="subitem">
+                                <dl>
+                                    <dt><a href="#">女装潮款：</a></dt>
+                                    <dd>
+                                        <em ><a href="#nogo">A21</a></em>
+                                        <em ><a href="#nogo">衣品天成</a></em>
+                                        <em ><a href="#nogo">唐狮</a></em>
+                                        <em ><a href="#nogo">森马</a></em>
+                                        <em ><a href="#nogo">真维斯</a></em>
+                                        <em ><a href="#nogo">彪马</a></em>
+                                        <em ><a href="#nogo">海澜之家</a></em>
+                                        <em class="noborder"><a href="#nogo">利郎</a></em>
+                                        <em ><a href="#nogo">美特斯邦威</a></em>
+                                        <em ><a href="#nogo">波司登</a></em>
+                                        <em ><a href="#nogo">雪中飞</a></em>
+                                        <em ><a href="#nogo">贵人鸟</a></em>
+                                        <em ><a href="#nogo">凡人优品</a></em>
+
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="#">女装运动：</a></dt>
+                                    <dd>
+                                        <em ><a href="#nogo">耐克</a></em>
+                                        <em ><a href="#nogo">阿迪达斯</a></em>
+                                        <em ><a href="#nogo">李宁</a></em>
+                                        <em ><a href="#nogo">安踏</a></em>
+                                        <em ><a href="#nogo">红双喜</a></em>
+                                        <em ><a href="#nogo">匹克</a></em>
+                                        <em ><a href="#nogo">奥康</a></em>
+                                        <em ><a href="#nogo">骆驼</a></em>
+                                        <em ><a href="#nogo">特步</a></em>
+                                        <em ><a href="#nogo">乔丹</a></em>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="subitem">
+                                <dl>
+                                    <dt><a href="#">男装潮款：</a></dt>
+                                    <dd>
+                                        <em ><a href="#nogo">A21</a></em>
+                                        <em ><a href="#nogo">衣品天成</a></em>
+                                        <em ><a href="#nogo">唐狮</a></em>
+                                        <em ><a href="#nogo">森马</a></em>
+                                        <em ><a href="#nogo">真维斯</a></em>
+                                        <em ><a href="#nogo">彪马</a></em>
+                                        <em ><a href="#nogo">海澜之家</a></em>
+                                        <em class="noborder"><a href="#nogo">利郎</a></em>
+                                        <em ><a href="#nogo">美特斯邦威</a></em>
+                                        <em ><a href="#nogo">波司登</a></em>
+                                        <em ><a href="#nogo">雪中飞</a></em>
+                                        <em ><a href="#nogo">贵人鸟</a></em>
+                                        <em ><a href="#nogo">凡人优品</a></em>
+
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="#">男装运动：</a></dt>
+                                    <dd>
+                                        <em ><a href="#nogo">耐克</a></em>
+                                        <em ><a href="#nogo">阿迪达斯</a></em>
+                                        <em ><a href="#nogo">李宁</a></em>
+                                        <em ><a href="#nogo">安踏</a></em>
+                                        <em ><a href="#nogo">红双喜</a></em>
+                                        <em ><a href="#nogo">匹克</a></em>
+                                        <em ><a href="#nogo">奥康</a></em>
+                                        <em ><a href="#nogo">骆驼</a></em>
+                                        <em ><a href="#nogo">特步</a></em>
+                                        <em ><a href="#nogo">乔丹</a></em>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">女鞋/男鞋</a>
+                        <div class="jnNav">
+                            <div class="subitem">
+                                <dl>
+                                    <dt><a href="#">品牌：</a></dt>
+                                    <dd>
+                                        <em ><a href="#nogo">耐克</a></em>
+                                        <em ><a href="#nogo">阿迪达斯</a></em>
+                                        <em ><a href="#nogo">匡威</a></em>
+                                        <em ><a href="#nogo">特步</a></em>
+                                        <em ><a href="#nogo">匹克</a></em>
+                                        <em ><a href="#nogo">安踏</a></em>
+                                        <em ><a href="#nogo">李宁</a></em>
+                                        <em class="noborder"><a href="#nogo">红蜻蜓</a></em>
+                                        <em ><a href="#nogo">回力</a></em>
+                                        <em ><a href="#nogo">千百度</a></em>
+                                        <em ><a href="#nogo">百思图</a></em>
+                                        <em ><a href="#nogo">达芙妮</a></em>
+                                        <em ><a href="#nogo">妙丽</a></em>
+                                        <em ><a href="#nogo">利郎</a></em>
+                                        <em ><a href="#nogo">凡人优品</a></em>
+                                        <em ><a href="#nogo">足力健</a></em>
+                                        <em ><a href="#nogo">乔丹</a></em>
+                                        <em ><a href="#nogo">鸿星尔克</a></em>
+
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">手机/电脑</a>
+                        <div class="jnNav">
+                            <div class="subitem">
+                                <dl>
+                                    <dt><a href="#">手机：</a></dt>
+                                    <dd>
+                                        <em ><a href="#nogo">苹果</a></em>
+                                        <em ><a href="#nogo">三星</a></em>
+                                        <em ><a href="#nogo">华为</a></em>
+                                        <em ><a href="#nogo">小米</a></em>
+                                        <em ><a href="#nogo">魅族</a></em>
+                                        <em ><a href="#nogo">锤子</a></em>
+                                        <em ><a href="#nogo">一加</a></em>
+                                        <em class="noborder"><a href="#nogo">中兴</a></em>
+                                        <em ><a href="#nogo">联想</a></em>
+                                        <em ><a href="#nogo">金立</a></em>
+                                        <em ><a href="#nogo">OPPO</a></em>
+                                        <em ><a href="#nogo">vivo</a></em>
+                                        <em ><a href="#nogo">努比亚</a></em>
+
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="#">电脑：</a></dt>
+                                    <dd>
+                                        <em ><a href="#nogo">苹果</a></em>
+                                        <em ><a href="#nogo">三星</a></em>
+                                        <em ><a href="#nogo">联想</a></em>
+                                        <em ><a href="#nogo">小米</a></em>
+                                        <em ><a href="#nogo">惠普</a></em>
+                                        <em ><a href="#nogo">戴尔</a></em>
+                                        <em ><a href="#nogo">雷神</a></em>
+                                        <em class="noborder"><a href="#nogo">神州</a></em>
+                                        <em ><a href="#nogo">acer</a></em>
+
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">图书/音像</a>
+                        <div class="jnNav">
+                            <div class="subitem">
+                                <dl>
+                                    <dt><a href="#">图书：</a></dt>
+                                    <dd>
+                                        <em ><a href="#nogo">计算机</a></em>
+                                        <em ><a href="#nogo">数学</a></em>
+                                        <em ><a href="#nogo">金融</a></em>
+                                        <em ><a href="#nogo">建筑</a></em>
+                                        <em ><a href="#nogo">美术</a></em>
+                                        <em ><a href="#nogo">音乐</a></em>
+                                        <em ><a href="#nogo">医药</a></em>
+                                        <em class="noborder"><a href="#nogo">化工</a></em>
+                                        <em ><a href="#nogo">生物</a></em>
+                                        <em ><a href="#nogo">高中</a></em>
+                                        <em ><a href="#nogo">初中</a></em>
+                                        <em ><a href="#nogo">小学</a></em>
+                                        <em ><a href="#nogo">言情玄幻</a></em>
+                                        <em ><a href="#nogo">中外名著</a></em>
+                                        <em ><a href="#nogo">工具书</a></em>
+
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="#">音像：</a></dt>
+                                    <dd>
+                                        <em ><a href="#nogo">胎教音乐</a></em>
+                                        <em ><a href="#nogo">经典影片</a></em>
+                                        <em ><a href="#nogo">古典音乐</a></em>
+                                        <em ><a href="#nogo">网络游戏</a></em>
+                                        <em ><a href="#nogo">在线教育</a></em>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">美妆个护</a>
+                        <div class="jnNav">
+                            <div class="subitem">
+                                <dl>
+                                    <dt><a href="#">品牌推荐：</a></dt>
+                                    <dd>
+                                        <em ><a href="#nogo">自然堂</a></em>
+                                        <em ><a href="#nogo">丸美</a></em>
+                                        <em ><a href="#nogo">香奈儿</a></em>
+                                        <em ><a href="#nogo">一叶子</a></em>
+                                        <em ><a href="#nogo">雪花</a></em>
+                                        <em ><a href="#nogo">Olay</a></em>
+                                        <em ><a href="#nogo">雅诗兰黛</a></em>
+                                        <em class="noborder"><a href="#nogo">兰蔻</a></em>
+                                        <em ><a href="#nogo">温碧泉</a></em>
+                                        <em ><a href="#nogo">欧莱雅</a></em>
+                                        <em ><a href="#nogo">高夫</a></em>
+                                        <em ><a href="#nogo">杰威尔</a></em>
+                                        <em ><a href="#nogo">阿迪达斯</a></em>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="#">面部护肤：</a></dt>
+                                    <dd>
+                                        <em ><a href="#nogo">补水保湿</a></em>
+                                        <em ><a href="#nogo">卸妆洁面</a></em>
+                                        <em ><a href="#nogo">眼霜</a></em>
+                                        <em ><a href="#nogo">爽肤水</a></em>
+                                        <em ><a href="#nogo">面膜</a></em>
+                                        <em ><a href="#nogo">精华</a></em>
+                                        <em ><a href="#nogo">防晒</a></em>
+                                        <em ><a href="#nogo">套装</a></em>
+                                    </dd>
+                                    <dt><a href="#">身体护理：</a></dt>
+                                    <dd>
+                                        <em ><a href="#nogo">补水保湿</a></em>
+                                        <em ><a href="#nogo">沐浴</a></em>
+                                        <em ><a href="#nogo">润肤</a></em>
+                                        <em ><a href="#nogo">爽肤水</a></em>
+                                        <em ><a href="#nogo">精油</a></em>
+                                        <em ><a href="#nogo">颈部</a></em>
+                                        <em ><a href="#nogo">手足</a></em>
+                                        <em ><a href="#nogo">套装</a></em>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">家用电器</a>
+                        <div class="jnNav">
+                            <div class="subitem">
+                                <dl>
+                                    <dt><a href="#">品牌推荐：</a></dt>
+                                    <dd>
+                                        <em ><a href="#nogo">海尔</a></em>
+                                        <em ><a href="#nogo">格力</a></em>
+                                        <em ><a href="#nogo">TCL</a></em>
+                                        <em ><a href="#nogo">松下</a></em>
+                                        <em ><a href="#nogo">小米</a></em>
+                                        <em ><a href="#nogo">海康</a></em>
+                                        <em ><a href="#nogo">奥克斯</a></em>
+                                        <em ><a href="#nogo">志高</a></em>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="#">大家电：</a></dt>
+                                    <dd>
+                                        <em ><a href="#nogo">电视</a></em>
+                                        <em ><a href="#nogo">冰箱</a></em>
+                                        <em ><a href="#nogo">洗衣机</a></em>
+                                        <em ><a href="#nogo">空调</a></em>
+                                        <em ><a href="#nogo">油烟机</a></em>
+
+                                    </dd>
+                                    <dt><a href="#">小家电：</a></dt>
+                                    <dd>
+                                        <em ><a href="#nogo">微波炉</a></em>
+                                        <em ><a href="#nogo">电磁炉</a></em>
+                                        <em ><a href="#nogo">吹风机</a></em>
+                                        <em ><a href="#nogo">热水器</a></em>
+                                        <em ><a href="#nogo">压力锅</a></em>
+                                        <em ><a href="#nogo">烤箱</a></em>
+                                        <em ><a href="#nogo">电饼铛</a></em>
+                                        <em ><a href="#nogo">吸尘器</a></em>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">医药保健</a>
+                        <div class="jnNav">
+                            <div class="subitem">
+                                <dl>
+                                    <dt><a href="#">疾病种类：</a></dt>
+                                    <dd>
+                                        <em ><a href="#nogo">感冒</a></em>
+                                        <em ><a href="#nogo">发烧</a></em>
+                                        <em ><a href="#nogo">流鼻涕</a></em>
+                                        <em ><a href="#nogo">头痛</a></em>
+                                        <em ><a href="#nogo">伤风</a></em>
+                                        <em ><a href="#nogo">高血压</a></em>
+                                        <em ><a href="#nogo">糖尿病</a></em>
+                                        <em ><a href="#nogo">儿科疾病</a></em>
+                                        <em ><a href="#nogo">妇科</a></em>
+                                        <em ><a href="#nogo">泌尿科</a></em>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="#">医药分类：</a></dt>
+                                    <dd>
+                                        <em ><a href="#nogo">补钙补锌</a></em>
+                                        <em ><a href="#nogo">维生素</a></em>
+                                        <em ><a href="#nogo">胶原带白</a></em>
+                                        <em ><a href="#nogo">益生菌</a></em>
+                                        <em ><a href="#nogo">阿胶</a></em>
+                                        <em ><a href="#nogo">计生情趣</a></em>
+                                        <em ><a href="#nogo">中草药</a></em>
+
+                                    </dd>
+                                    <dt><a href="#">旗舰店：</a></dt>
+                                    <dd>
+                                        <em ><a href="#nogo">康爱多大药房</a></em>
+                                        <em ><a href="#nogo">恒生大药房</a></em>
+                                        <em ><a href="#nogo">扁鹊大药房</a></em>
+                                        <em ><a href="#nogo">众生大药房</a></em>
+                                        <em ><a href="#nogo">亲民大药房</a></em>
+                                        <em ><a href="#nogo">康生大药房</a></em>
+                                        <em ><a href="#nogo">健康大药房</a></em>
+                                        <em ><a href="#nogo">四季春大药房</a></em>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <!-- 导航 end -->
+        </div>
+    </header>
+    <div id="content">
+        <div class="janeShop">
+            <!--侧边栏 start-->
+            <aside id="category">
+                <h2 title="商品分类">商品推荐</h2>
+                <div class="Info">
+                    <h3>猜你喜欢</h3>
+                    <ul>
+                        <li><a href="#nogo" >耐克</a></li>
+                        <li><a href="#nogo" >阿迪达斯</a></li>
+                        <li><a href="#nogo" >香奈儿</a></li>
+                        <li><a href="#nogo" class="promotion">A21</a></li>
+                        <li><a href="#nogo" >丸美</a></li>
+                        <li><a href="#nogo" >一叶子</a></li>
+                        <li><a href="#nogo" >Jquery</a></li>
+                        <li><a href="#nogo" >JavaScript</a></li>
+                    </ul>
+                    <br class="clear" />
+                    <h3>女装/男装</h3>
+                    <ul>
+                        <li><a href="#nogo" >呢大衣</a></li>
+                        <li><a href="#nogo" >T恤</a></li>
+                        <li><a href="#nogo" class="promotion">T恤衫</a></li>
+                        <li><a href="#nogo" >衬衫</a></li>
+                        <li><a href="#nogo" >羊绒衫</a></li>
+                        <li><a href="#nogo" >针织</a></li>
+                        <li><a href="#nogo" >西服</a></li>
+                        <li><a href="#nogo" >皮外套</a></li>
+                    </ul>
+                    <br class="clear" />
+                    <h3>女鞋/男鞋</h3>
+                    <ul>
+                        <li><a href="#nogo" >帆布鞋</a></li>
+                        <li><a href="#nogo" >人字拖</a></li>
+                        <li><a href="#nogo" class="promotion">小白鞋</a></li>
+                        <li><a href="#nogo" >凉鞋</a></li>
+                        <li><a href="#nogo" >雨鞋</a></li>
+                        <li><a href="#nogo" >运动鞋</a></li>
+                        <li><a href="#nogo" >跑步鞋</a></li>
+                        <li><a href="#nogo" >内增高</a></li>
+                    </ul>
+                    <br class="clear" />
+                    <h3>图书音像</h3>
+                    <ul>
+                        <li><a href="#nogo" class="promotion" >JavaScript</a></li>
+                        <li><a href="#nogo" >HTML5</a></li>
+                        <li><a href="#nogo" >CSS</a></li>
+                        <li><a href="#nogo"  class="promotion">Vue</a></li>
+                        <li><a href="#nogo" >Angular</a></li>
+                        <li><a href="#nogo" >ajax</a></li>
+                        <li><a href="#nogo" >Node.js</a></li>
+                        <li><a href="#nogo" >PHP</a></li>
+                    </ul>
+                    <br class="clear" />
+                </div>
+            </aside>
+            <!--侧边栏 end-->
+            <!-- 大屏广告 start -->
+            <div id="imageSlide">
+                <a href="#nogo" id="Img">
+                    <img src="images/ads/1.jpg" alt="A21 T恤夏装"/>
+                    <img src="images/ads/2.jpg" alt="Nike新款男鞋"/>
+                    <img src="images/ads/3.jpg" alt="前端开发系列丛书"/>
+                    <img src="images/ads/4.jpg" alt="Appl开学季 青春季"/>
+                    <img src="images/ads/5.jpg" alt="兰蔻满188-100"/>
+                </a>
+                <div>
+                    <a href="###1"><em>A21 T恤</em><em>清凉一夏</em></a>
+                    <a href="###2"><em>Nike男鞋</em><em>全场357元起</em></a>
+                    <a href="###3"><em>前端丛书</em><em>系列全场8折</em></a>
+                    <a href="###4"><em>Apple</em><em>开学季 青春季</em></a>
+                    <a href="###5" class="last"><em>兰蔻</em><em>满188-100</em></a>
+                </div>
+            </div>
+            <!-- 大屏广告 end -->
+
+            <!-- 最新动态 start -->
+            <div id="right" >
+                <div id="login">
+                     <img src="images/no_login.jpg" alt="">
+                    <p>Hi~欢迎来到商城</p>
+                    <ul>
+                        <li><a href="login.html" class="JS_css3">登录</a></li>
+                        <li><a href="#nogo" class="JS_css3">注册</a></li>
+                    </ul>
+                </div>
+                <div id="NoticeInfo">
+                    <div id="notice">
+                        <div class="content"><a href="#" class="a_1">今日促销</a><a href="#" class="a_2">明日预告</a></div>
+                        <div class="container">
+                            <div class="switch_1">
+                                <ul>
+                                    <li><a href="###1" class="tooltip" title="A21旗舰店5周年活动">A21旗舰店5周年活动</a></li>
+                                    <li><a href="###2" class="tooltip" title="恭喜您！李宁运动鞋降价了！！！">恭喜您！李宁运动降价了！！！</a></li>
+                                    <li><a href="###3" class="tooltip" title="买大衣送围巾，限量赠送，送完为止">买大衣送围巾，限时限量赠送</a></li>
+                                    <li><a href="###4" class="tooltip" title="女神专属好礼等你来拿">女神专属好礼等你来拿</a></li>
+                                    <li><a href="###5" class="tooltip" title="最后一天，再不买就涨价了">最后一天，再不买就涨价了</a></li>
+                                </ul>
+                            </div>
+                            <div class="switch_2">
+                                <ul>
+                                    <li><a href="###1" class="tooltip" title="米粉节">买手机送米粉卡，还有百元优惠券</a></li>
+                                    <li><a href="###2" class="tooltip" title="恭喜您！安踏运动鞋降价了！！！">恭喜您！安踏运动鞋降价了！！！</a></li>
+                                    <li><a href="###3" class="tooltip" title="兰蔻满188-100">兰蔻满188-100，仅此一天</a></li>
+                                    <li><a href="###4" class="tooltip" title="女神专属好礼等你来拿">女神专属好礼等你来拿</a></li>
+                                    <li><a href="###5" class="tooltip" title="最后一天，再不买就涨价了">最后一天，再不买就涨价了</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br class="clear" />
+                </div>
+            </div>
+            <!-- 最新动态 end -->
+
+            <!--品牌活动-->
+            <div id="jnBrand">
+                <div id="jnBrandTab">
+                    <h2 title="品牌活动">品牌活动</h2>
+                    <ul>
+                        <li><a title="运动" href="#nogo">男鞋</a></li>
+                        <li><a title="女鞋" href="#nogo">美妆</a></li>
+                        <li><a title="男鞋" href="#nogo">手机</a></li>
+                        <li><a title="Applife" href="#nogo">书籍</a></li>
+                    </ul>
+                </div>
+                <div id="jnBrandContent">
+                    <div id="jnBrandList">
+                        <ul>
+                            <li>
+                                <a href="###1" class="JS_live"><img alt="耐克" src="images/upload/01.jpg" /></a>
+                                <span><a href="###1">耐克</a></span>
+                            </li>
+                            <li>
+                                <a href="###2" class="JS_live"><img alt="阿迪达斯" src="images/upload/02.jpg" /></a>
+                                <span><a href="###2">阿迪达斯</a></span>
+                            </li>
+                            <li>
+                                <a href="###3" class="JS_live"><img alt="回力" src="images/upload/03.jpg" /></a>
+                                <span><a href="###3">回力</a></span>
+                            </li>
+                            <li>
+                                <a href="###4" class="JS_live"><img alt="安踏" src="images/upload/04.jpg" /></a>
+                                <span><a href="###4">安踏</a></span>
+                            </li>
+                            <li>
+                                <a href="###2" class="JS_live"><img alt="一叶子面膜" src="images/upload/06.jpg" /></a>
+                                <span><a href="###2">一叶子</a></span>
+                            </li>
+                            <li>
+                                <a href="###3" class="JS_live"><img alt="雅诗兰黛" src="images/upload/07.gif" /></a>
+                                <span><a href="###3">雅诗兰黛</a></span>
+                            </li>
+                            <li>
+                                <a href="###4" class="JS_live"><img alt="兰蔻" src="images/upload/08.jpg" /></a>
+                                <span><a href="###4">兰蔻</a></span>
+                            </li>
+                            <li>
+                                <a href="###1" class="JS_live"><img alt="OLAY" src="images/upload/09.jpg" /></a>
+                                <span><a href="###1">OLAY</a></span>
+                            </li>
+
+                            <li>
+                                <a href="###2" class="JS_live"><img alt="iPhone" src="images/upload/11.gif" /></a>
+                                <span><a href="###2">iPhone</a></span>
+                            </li>
+                            <li>
+                                <a href="###1" class="JS_live"><img alt="小米" src="images/upload/12.gif" /></a>
+                                <span><a href="###1">小米</a></span>
+                            </li>
+                            <li>
+                                <a href="###3" class="JS_live"><img alt="三星" src="images/upload/13.jpg" /></a>
+                                <span><a href="###3">三星</a></span>
+                            </li>
+                            <li>
+                                <a href="###4" class="JS_live"><img alt="华为" src="images/upload/14.jpg" /></a>
+                                <span><a href="###4">华为</a></span>
+                            </li>
+                            <li>
+                                <a href="###1" class="JS_live"><img alt="解忧杂货铺" src="images/upload/15.jpg" /></a>
+                                <span><a href="###1">解忧杂货铺</a></span>
+                            </li>
+                            <li>
+                                <a href="###2" class="JS_live"><img alt="小王子" src="images/upload/16.jpg" /></a>
+                                <span><a href="###2">小王子</a></span>
+                            </li>
+                            <li>
+                                <a href="###3" class="JS_live"><img alt="摆渡人" src="images/upload/17.jpg" /></a>
+                                <span><a href="###3">摆渡人</a></span>
+                            </li>
+                            <li>
+                                <a href="###4" class="JS_live"><img alt="Vue" src="images/upload/18.jpg" /></a>
+                                <span><a href="###4">vue</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <footer id="footer">Copyright &copy; 2018 Made By HanYubo.</footer>
+    <!--input框设计-->
+    <script src="scripts/input.js"></script>
+    <!--换肤-->
+    <script src="scripts/changeSkin.js"></script>
+    <!--显示隐藏的导航栏信息-->
+    <script src="scripts/nav.js"></script>
+    <!--热卖图标显示-->
+    <script src="scripts/hot.js"></script>
+    <!--图片滑动-->
+    <script src="scripts/imgSlide.js"></script>
+    <!--消息提示-->
+    <script src="scripts/noticeSwitch.js"></script>
+    <!--下面滑动栏-->
+    <script src="scripts/brandSlide.js"></script>
+</body>
+</html>

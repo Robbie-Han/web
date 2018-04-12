@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <script src="scripts/jquery-1.11.1.js"></script>
+    <link rel="stylesheet" href="styles/login.css">
+</head>
+
+<body>
+        <header><a href="index.html" class="logo"><img src="images/logo2.jpg" alt="Shop"></a>
+            <br>
+            <strong>欢迎登录...</strong>
+        </header>
+        <article>
+            <div id="login">
+                <div id="switch">
+                <a href="#" id="QR_cord">二维码登录</a>|<a href="#" id="normal"> 账号密码登录</a>
+                </div>
+                <div id="mid">
+                    <img src="images/二维码.png" alt="">
+                    <form action="#">
+                        <div class="Info">
+                            <label for="account">账号：</label>
+                            <input type="text" id="account" placeholder="手机号/用户名" required>
+                        </div>
+                        <div class="Info">
+                            <label for="password">密码：</label>
+                            <input type="password" id="password" placeholder="密码" required>
+                        </div>
+                        <div class="btn">
+                        <input type="reset" value="重置" >
+                        <input type="submit" value="提交">
+                        </div>
+                    </form>
+                </div>
+                <div id="last">
+                    <a href="#">忘记密码</a>|<a href="register.html">立即注册</a>
+                </div>
+            </div>
+        </article>
+        <footer id="footer">Copyright &copy; 2018 Made By HanYubo.</footer>
+        <script src="scripts/loginStyle.js"></script>
+        <script src="scripts/loginInput.js"></script>
+</body>
+</html>
